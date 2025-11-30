@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Dipti Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- Scroll progress bar -->
+    <div id="scrollProgressContainer">
+        <div id="scrollProgress"></div>
+    </div>
+
+    <!-- HERO WITH VIDEO BACKGROUND -->
+    <header id="hero">
+        <video autoplay muted loop playsinline id="video-background">
+            <source src="background-loop.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
+
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+            <span class="logo">Dipti Giri</span>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <!-- PDF link (kept relative to your uploaded file if you host it) -->
+                <li><a href="/mnt/data/AdvanceFrontend_27e3e38d-4f85-486b-9b4b-3e847ead608d_160227_.pdf" download>PDF</a></li>
+            </ul>
+
+            <button id="menuButton" class="menu-toggle" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+        </nav>
+
+        <div class="hero-content">
+            <h1>Hi — I'm Dipti</h1>
+            <p>Beginner Frontend Developer — HTML • CSS • JavaScript</p>
+        </div>
+    </header>
+
+    <!-- ABOUT -->
+    <section id="about" class="container">
+        <h2>About</h2>
+        <p>
+            I'm Dipti Giri, a beginner web developer learning HTML, CSS and JavaScript.
+            I love creating simple, clean and functional websites.
+        </p>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="container">
+        <h2>Skills</h2>
+        <div class="skills-row">
+            <div class="skill">HTML5</div>
+            <div class="skill">CSS3</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">Responsive</div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="container">
+        <h2>Projects</h2>
+        <div id="projects-grid">
+            <article class="project-card">
+                <img src="image/Myportfolio.png" alt="Portfolio Screenshot">
+                <h3>My Portfolio</h3>
+                <p>This project showcases my skills in HTML, CSS, and basic JavaScript.</p>
+            </article>
+
+            <article class="project-card">
+                <img src="image/photo1.png" alt="Portfolio Screenshot">
+                <h3>Project Two</h3>
+                <p>I created a To-Do Task app design in Figma where users can add, edit, and delete tasks. The layout is simple and clean, focusing on easy task management and a user-friendly interface.</p>
+            </article>
+
+            <article class="project-card">
+                <img src="image/photo2.png" alt="Portfolio Screenshot">
+                <h3>Project Three</h3>
+                <p>I made a simple weather app that shows live weather for any city. It uses an API to display temperature, humidity, and conditions. This project helped me practice JavaScript, API fetching, and updating the UI.</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="container">
+        <h2>Contact</h2>
+        <form id="contactForm" class="contact-form" novalidate>
+            <label for="name">Name</label>
+            <input type="text" id="name" required placeholder="Enter your name" />
+
+            <label for="email">Email</label>
+            <input type="email" id="email" required placeholder="Enter your email" />
+
+            <label for="message">Message</label>
+            <textarea id="message" rows="4" required placeholder="Write your message..."></textarea>
+
+            <button type="submit" id="sendBtn">Send Message</button>
+
+            <p id="msg" aria-live="polite"></p>
+        </form>
+    </section>
+
+    <footer class="container">
+        <p>© <span id="year"></span> Dipti Giri — Built with ❤️</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
